@@ -15,8 +15,10 @@
         ></div>
       </div>
 
-      <div class="text-center mt-4 text-xl font-bold">FIND RGB</div>
-      <div class="flex items-center mx-4">
+      <div v-if="!submitActive" class="text-center mt-4 text-xl font-bold">
+        FIND RGB
+      </div>
+      <div v-if="!submitActive" class="flex items-center mx-4">
         <q-slider
           v-model="rvalue"
           :min="0"
@@ -30,7 +32,7 @@
         <div class="pl-2 text-xl font-bold">{{ rvalue }}</div>
       </div>
 
-      <div class="flex items-center mx-4">
+      <div v-if="!submitActive" class="flex items-center mx-4">
         <q-slider
           v-model="gvalue"
           :min="0"
@@ -44,7 +46,7 @@
         <div class="pl-2 text-xl font-bold">{{ gvalue }}</div>
       </div>
 
-      <div class="flex items-center mx-4">
+      <div v-if="!submitActive" class="flex items-center mx-4">
         <q-slider
           v-model="bvalue"
           :min="0"
